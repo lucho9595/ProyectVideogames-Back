@@ -74,7 +74,7 @@ async function getApiVideogame() {
 async function allVideogames() {
     const infoDB = await getDB();
     const infoAPI = await getApiVideogame();
-    const allData = [...infoAPI,...infoDB]
+    const allData = [...infoDB,...infoAPI]
     return allData;
 };
 
