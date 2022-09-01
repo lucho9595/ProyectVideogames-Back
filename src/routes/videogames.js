@@ -25,15 +25,6 @@ router.get('/', async (req, res, next) => {
         const allData = data.concat(allGames)
         if (name) {
             let all = allData.filter((game) => game.name?.toLowerCase().trim().includes(name.toLowerCase())).slice(0, 15)
-        //     if (all) {
-        //         return res.status(200).send(all)
-        //     }
-        //     else if (allData.name !== name) {
-        //         throw new Error("No hay resultados para la busqueda.")
-        //     }
-        // } else {
-        //     res.status(200).send(allGames)
-        // }
         res.status(200).send(all.length === 0 ? "Game not found" : all )
         } else{
             res.status(200).send(allGames)
