@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 const videogame = require("./videogames.js");
 const genre = require("./genre.js");
-const axios = require('axios');
-const {API_KEY} = process.env;
-const {Platform} = require("../db.js")
+// const axios = require('axios');
+// const {API_KEY} = process.env;
+// const {Platform} = require("../db.js")
 
 
 router.use('/videogame', videogame);
